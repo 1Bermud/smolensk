@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./libs/gsap/ScrollSmoother.min.js" defer></script>
+    <script src="./libs/gsap/ScrollTrigger.min.js" defer></script>
+    <script src="./libs/gsap/gsap.min.js" defer></script>
+    <script src="./js/index.js" defer></script>
+
+    <link rel="stylesheet" href="./css/reset.css" defer>
+    <link rel="stylesheet" href="./css/main.css" defer>
+    <title>Смоленск</title>
+</head>
+<body >
+    <div class="wrapper">
+        <div class="content">
+
+            <header class="header">
+                <div class="container">
+                    <div class="header__top">
+                        <nav class="nav">
+                            <ul class="nav__list">
+                                <li>
+                                    <a class="nav__icon none" id="burgerBtn" href="#">
+                                        <div class="nav__icon-line"></div>
+                                        <div class="nav__icon-line"></div>
+                                        <div class="nav__icon-line"></div>
+                                    </a>
+                                </li>
+                                <li><a class="nav__list-a" href="#!">о городе</a></li>
+                                <li><a class="nav__list-a" href="#!">места</a></li>
+                                <li>
+                                    <p><a class="events active nav__list-a" href="#">заведения</a></p>
+                                    <div class="events-min none">
+                                        <p><a href="#">мероприятия</a></p>
+                                        <p><a href="#">рестораны</a></p>
+                                        <p><a href="#">отели</a></p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="nav__menu">
+                                <li class="nav__list-search" id="search">поиск</li>
+                                <li class="nav__list-lang">
+                                    <div class="rus active">RU</div>
+                                    <div class="eng">EN</div>
+                                </li>
+                                <li class="nav__user">
+                                    <a href="#">
+                                        <a href="#"><img src="./images/user-path.svg" alt="path" class="user__path"></a>
+                                        <a href="auth.html"><img src="./images/user-icon-gray.svg" alt="user" class="user__icon"></a>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="burger-menu none">
+                        <ul class="burger__ul">
+                            <li><a href="#">о городе</a></li>
+                            <li><a href="#">заведения</a></li>
+                            <li><a href="#">места</a></li>
+                        </ul>
+                        <div class="burger__bottom">
+                            <p><a href="#">о нас</a></p>
+                            <p><a href="#">контакты</a></p>
+                            <p><a href="#">статьи</a></p>
+                        </div>
+                    </div>
+                    <div class="header__content" data-speed="1.1">
+                        <div class="header__content-left" >
+                            <h1>
+                                <span>открой<br> свой </span><br> cмоленск
+                            </h1>
+                            <button class="header__btn">поехали!</button>
+                        </div>
+                        <div class="header__bot">
+                            <p>умный гид</p>
+                            <img src="./images/assistant-icon.svg" alt="assistant">
+                        </div>
+                    </div>
+                    <div class="header__dark  none">
+                        <div class="search">
+                            <input class="search__top-block" type="text" placeholder="поиск достопримечательностей, событий и заведений ">
+                            <img src="./images/search.svg" alt="">
+                        </div>
+                        <div class="search__main-block"></div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="reasons ">
+                <div class="container">
+                    <h1 class="reasons__h"><span>почему</span> нужно <br> &nbsp&nbsp&nbsp&nbsp посетить смоленск</h1>
+                    <div class="reasons__blocks">
+                        <div class="reasons__text">
+                            <img src="./images/reason1.svg" alt="nature">
+                            <div class="reasons__text-main">природные красоты</div>
+                            <div class="reasons__text-description">
+                                Невероятная природа, просто фантастическая, а какие леса - ну самая настоящая сказка.Газуем в срочном порядке
+                            </div>
+                        </div>
+                        <div class="reasons__text">
+                            <img src="./images/reason2.svg" alt="history">
+                            <div class="reasons__text-main">богатая история</div>
+                            <div class="reasons__text-description">
+                                А какая история, какая история, больше тысячи лет этой малышке! Сложно в это поверить.
+                            </div>
+                        </div>
+                        <div class="reasons__text ">
+                            <img src="./images/reason3.svg" alt="culture">
+                            <div class="reasons__text-main">культурные мероприятия</div>
+                            <div class="reasons__text-description">
+                                Только ради культурных мероприятий можно приехать в Смоленск и не уехать обратно - они вас точно не отпустят.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+            <section class="section sights">
+                <div class="container">
+                    <div class="sights__cards">
+                        <div class="sights__card ">
+                            <div class="bg">
+                                <img src="./images/sights/sight1.png" alt="">
+                            </div>
+                            <div class="avatar">
+                                <div class="img">
+                                    <img src="./images/sights/icon1.svg" alt="">
+                                </div>
+                                <div class="text">
+                                    <span>Успенский собор</span>
+                                    <span>Духовный центр </span>
+                                    <a class="sights__btn " href="./cards.html">изучить</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sights__card ">
+                            <div class="bg">
+                                <img src="./images/sights/sight1.png" alt="">
+                            </div>
+                            <div class="avatar">
+                                <div class="img">
+                                    <img src="./images/sights/icon2.svg" alt="">
+                                </div>
+                                <div class="text">
+                                    <span>Успенский собор</span>
+                                    <span>Духовный центр </span>
+                                    <a class="sights__btn " href="./cards.html">изучить</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sights__card active">
+                            <div class="bg">
+                                <img src="./images/sights/sight1.png" alt="">
+                            </div>
+                            <div class="avatar">
+                                <div class="img">
+                                    <img src="./images/sights/icon3.svg" alt="">
+                                </div>
+                                <div class="text">
+                                    <span>Успенский собор</span>
+                                    <span>Духовный центр </span>
+                                    <a class="sights__btn " href="./cards.html">изучить</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sights__card ">
+                            <div class="bg">
+                                <img src="./images/sights/sight1.png" alt="">
+                            </div>
+                            <div class="avatar">
+                                <div class="img">
+                                    <img src="./images/sights/icon4.svg" alt="">
+                                </div>
+                                <div class="text">
+                                    <span>Успенский собор</span>
+                                    <span>Духовный центр </span>
+                                    <a class="sights__btn" href="./cards.html">изучить</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sights__card ">
+                            <div class="bg">
+                                <img src="./images/blur-card.jpg" alt="">
+                            </div>
+                            <div class="avatar">
+                                <div class="last-avatar">
+                                    <img src="./images/point-right.svg" alt="">
+                                </div>
+                                <div class="text">
+                                    <a class="sights__btn sights__btn-more" href="./cards.html">смотреть все</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="history">
+                <div class="container">
+                    <div class="history__h">ту<span class="h-flag"></span> по городу</div>
+                </div>
+            </section>
+        
+            <footer class="footer">
+                <div class="container">
+                    <div class="bottom__items">
+                        <div class="bottom__item"><a href="#">Контакты</a></div>
+                        <div class="bottom__item"><a href="#">О нас</a></div>
+                        <div class="bottom__item"><a href="#">2023 | MISIS 52</a></div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+</body>
+</html>

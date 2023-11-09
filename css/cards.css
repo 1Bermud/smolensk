@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;700&display=swap');
+
+:root {
+    --white: #fff;
+    --beige: #F2D9BB;
+    --orange: #FB9600;
+    --black: #000;
+    --yellow: #F5CC90;
+    --gray: #E9E9E9;
+}
+
+a {
+    color: var(--black) !important;
+}
+
+body {
+    position: relative;
+    padding-bottom: 100px;
+    font-family: 'Unbounded', sans-serif;
+    background: #fff;
+    font-size: 16px;
+    color: var(--black);
+}
+
+.container {
+    margin: 0 24px;
+    max-width: 1480px;
+}
+
+.header__cards {
+    width: 100%;
+    padding: 20px 24px;
+    min-height: 16px;
+    background-color: var(--gray);
+    position: fixed;
+    top: 0;
+    z-index: 222;
+}
+
+.header__top-cards {
+    color: var(--black);
+    position: sticky;
+    top: 0;
+    font-size: 1.25rem;
+    font-weight: 300;
+    z-index: 1111;
+}
+
+.events {
+    --bg-img: url('/images/point-bottom-dark.svg') !important;
+}
+
+.events-min {
+    color: var(--black);
+    opacity: 0.8;
+}
+
+.nav__list-search::after {
+    background-image: url('/images/search-dark.svg') !important;
+}
+
+.nav__list-lang {
+    background: var(--white) !important;
+}
+
+.nav__list-lang .active {
+    background: var(--black) !important;
+    color: var(--white) !important;
+}
+
+.user__path {
+    background-color: var(--white) !important;
+}
+
+
+/*--search cards--*/
+.cards__search {
+    margin: 180px auto;
+    max-width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circle {
+    width: 90px;
+    height: 90px;
+    background-color: var(--gray);
+    border-radius: 50%;
+    position: relative;
+}
+
+.circle:not(:last-child):after{
+    content:'';
+    display: inline-block;
+    position: absolute;
+    background-image: url('/images/elipse-search-cards-bottom.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 90px;
+    height: 90px;
+    right: -45px;
+    bottom: -35px;
+}
+
+.circle:not(:last-child):before{
+    content:'';
+    display: inline-block;
+    position: absolute;
+    background-image: url('/images/elipse-search-cards-top.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 90px;
+    height: 90px;
+    right: -45px;
+    bottom: -9px;
+}
+
+.circle a {
+    margin-top: 8px;
+    margin-left: 8px;
+    padding: 8px;
+    min-height: 75px;
+    max-width: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    position: relative;
+}
+
+.circle a.active {
+    background-color: #2B546A;
+    border-radius: 50%;
+}
+
+.cards__icon {
+    width: 25px;
+}
+
+/*----cards block----*/
+.cards__block {
+    max-width: 80vw;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 260px);
+    gap: 20px;
+    grid-auto-rows: 10;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 9px;
+
+    max-width: 260px;
+    min-height: 280px;
+    overflow: hidden;
+
+    color: var(--black);
+    font-size: 1.25em;
+}
+
+.card__link1 {
+    top: 16px;
+    right: 12px;
+    position: absolute;
+    z-index: 3;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 12px;
+}
+
+.card__link2 {
+    top: 72px;
+    right: 12px;
+    position: absolute;
+    z-index: 3;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 9px;
+}
+
+.card__div{
+    position: relative;
+    min-width: 260px;
+    min-height: 280px;
+    overflow: hidden;
+
+    border-radius: 50px;
+}
+
+.card__img-bg {    
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.card__img {    
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    max-height: 280px;
+}
+
+.card__h {
+    font-weight: 400;
+}
+
+.card__p {
+    font-weight: 300;
+}
+
+
+
+.grid {
+    background: #DDD;
+  }
+  
+  /* clear fix */
+  .grid:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  
+  /* ---- .grid-item ---- */
+  
+  .grid-sizer,
+  .grid-item {
+    width: 33.333%;
+  }
+  
+  .grid-item {
+    float: left;
+  }
+  
+  .grid-item img {
+    display: block;
+    max-width: 100%;
+  }
+  
