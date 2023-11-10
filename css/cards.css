@@ -9,13 +9,12 @@
     --gray: #E9E9E9;
 }
 
-a {
-    color: var(--black) !important;
+.nav__list-a {
+    color: var(--black);
 }
 
 body {
     position: relative;
-    padding-bottom: 100px;
     font-family: 'Unbounded', sans-serif;
     background: #fff;
     font-size: 16px;
@@ -27,14 +26,17 @@ body {
     max-width: 1480px;
 }
 
-.header__cards {
+.header__cards{
     width: 100%;
     padding: 20px 24px;
     min-height: 16px;
-    background-color: var(--gray);
     position: fixed;
     top: 0;
     z-index: 222;
+}
+
+.header__bg {
+    background-color: var(--gray);
 }
 
 .header__top-cards {
@@ -137,111 +139,122 @@ body {
     width: 25px;
 }
 
-/*----cards block----*/
-.cards__block {
-    max-width: 80vw;
-    margin: 0 auto;
 
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 260px);
-    gap: 20px;
-    grid-auto-rows: 10;
+/*---description of img---*/
+.description {
+    height: 100vh;
+    min-width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
-.card {
-    position: relative;
+.description::after{
+    content:'';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    opacity: 0.4;
+    background: linear-gradient(180deg, #000 0.16%, rgba(105, 105, 105, 0.59) 55.02%, rgba(255, 255, 255, 0.00) 100%);
+}
+
+.description__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(50px);
+    border-top-right-radius: 50px;
+
+    max-width: 550px;
+    max-height: 600px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    row-gap: 9px;
-
-    max-width: 260px;
-    min-height: 280px;
-    overflow: hidden;
-
-    color: var(--black);
-    font-size: 1.25em;
+    row-gap: 25px;
+    padding: 50px 25px;
 }
 
-.card__link1 {
-    top: 16px;
-    right: 12px;
+.description__h {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-left: 25px;
+}
+
+.prev-descr{
     position: absolute;
-    z-index: 3;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-    padding: 12px;
+    top: 24px;
+    left: 20px;
 }
 
-.card__link2 {
-    top: 72px;
-    right: 12px;
-    position: absolute;
-    z-index: 3;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-    padding: 9px;
+.prev-descr:hover{
+    cursor: pointer;
 }
 
-.card__div{
+.description__text{
     position: relative;
-    min-width: 260px;
-    min-height: 280px;
-    overflow: hidden;
+    font-size: 1.2em;
+    font-weight: 300;
+    line-height: 32px;
+    max-height: 450px;
+    overflow-y: scroll;
+    padding: 0 25px;
+}
 
+.description__text::-webkit-scrollbar {
+    opacity: 0;
+    width: 4px;
+}
+
+.description__text::-webkit-scrollbar-thumb {
+    position: absolute;
+    display: inline-block;
+    border-radius: 20px;
+    background-color: var(--white);
+    opacity: 0.5;
+}
+
+
+.cards__block {
+    margin: 0 auto;
+    max-width: 1108px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 260px);
+    gap: 20px;
+}
+
+.card__content{
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    font-size: 1.2rem;
+}
+
+.card{
+    display: grid;
+    overflow: hidden;
+    background-size: cover;
     border-radius: 50px;
 }
 
-.card__img-bg {    
-    height: 100%;
-    width: 100%;
-    position: relative;
+.cards__block:nth-child(even){
+    color: #FB9600;
+}
+
+.card img{
+    height: 280px;
     overflow: hidden;
 }
 
-.card__img {    
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-
-    max-height: 280px;
-}
-
-.card__h {
+.card__h{
     font-weight: 400;
+    margin-left: 10px;
 }
-
-.card__p {
+.card__p{
     font-weight: 300;
+    margin-left: 10px;
 }
-
-
-
-.grid {
-    background: #DDD;
-  }
-  
-  /* clear fix */
-  .grid:after {
-    content: '';
-    display: block;
-    clear: both;
-  }
-  
-  /* ---- .grid-item ---- */
-  
-  .grid-sizer,
-  .grid-item {
-    width: 33.333%;
-  }
-  
-  .grid-item {
-    float: left;
-  }
-  
-  .grid-item img {
-    display: block;
-    max-width: 100%;
-  }
-  

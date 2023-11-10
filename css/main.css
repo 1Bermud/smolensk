@@ -15,7 +15,6 @@ a {
 
 body {
     position: relative;
-    padding-bottom: 100px;
     font-family: 'Unbounded', sans-serif;
     background: #fff;
     font-size: 16px;
@@ -374,16 +373,12 @@ body {
     color: var(--orange);
 }
 
-.none {
-    display: none;
-}
-
 /*----Sights-----*/
 .sights__cards {
     margin: 120px auto;
     display: flex;
-    height: 460px;
-    width: 840px;
+    height: 480px;
+    width: 1000px;
     grid-gap: 10px ;
 }
 .sights__card {
@@ -407,10 +402,6 @@ body {
     overflow: hidden;
 }
 
-.sights__card:last-child .bg img{
-    width: 570px;
-}
-
 .bg::before {
     content: '';
     position: absolute;
@@ -428,6 +419,7 @@ body {
     top: 0;
     left: 0;
     object-fit: cover;
+    filter: 9px;
 }
 .avatar {
     position: absolute;
@@ -515,6 +507,67 @@ body {
     left: 310px !important;
 }
 
+
+/*--Card map--*/
+.map {
+    position: relative;
+    color: var(--black);
+}
+.container {
+}
+.map__h {
+    display: inline-block;
+    transform: translateX(50%);
+    font-size: 4.5em;
+    max-width: 800px;
+    line-height: 74px;
+    font-weight: 500;
+}
+
+.map__h::before{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 75px;
+    left: -562px;
+    background-image: url(../images/pink-line.svg);
+    background-repeat: no-repeat;
+    width: 800px;
+    height: 206px;
+}
+
+.map__h p:first-child{
+    color: #FF7779;
+}
+.m-flag {
+    position: absolute;
+    top: -58px;
+    left: 86px;
+}
+
+.map__content {
+    margin-top: 476px;
+    background-image: url(../images/road.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    max-width: 100%;
+    min-height: 1300px;
+}
+
+.map__card {
+    display: flex;
+}
+
+.map__card-1 {
+}
+
+.map__card-img {
+}
+
+.map__card-p {
+}
+
+
 /*--Footer---*/
 .footer {
     width: 100%;
@@ -529,6 +582,13 @@ body {
     display: flex;
     align-items: center;
     column-gap: 60px;
+}
+
+
+
+
+.none {
+    display: none;
 }
 
 /* .close {
