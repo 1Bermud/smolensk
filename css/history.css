@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;700&display=swap');
+
+:root {
+    --white: #fff;
+    --beige: #F2D9BB;
+    --orange: #FB9600;
+    --black: #000;
+    --yellow: #F5CC90;
+    --gray: #E9E9E9;
+    --finalHeight: 250px;
+    --finalWidth: 3 * var(--finalHeight);
+    --scrollBarHeight: 1px;
+}
+
+.nav__list-a {
+    color: var(--black);
+}
+
+body {
+    position: relative;
+    font-family: 'Unbounded', sans-serif;
+    background: #fff;
+    font-size: 16px;
+    color: var(--black);
+}
+
+.container {
+    margin: 0 24px;
+    max-width: 1480px;
+}
+
+.header__cards{
+    width: 100%;
+    padding: 20px 24px;
+    min-height: 16px;
+    position: fixed;
+    top: 0;
+    z-index: 222;
+}
+
+.header__bg {
+    background-color: var(--gray);
+}
+
+.header__top-cards {
+    color: var(--black);
+    position: sticky;
+    top: 0;
+    font-size: 1.25rem;
+    font-weight: 300;
+    z-index: 1111;
+}
+
+.events {
+    --bg-img: url('/images/point-bottom-dark.svg') !important;
+}
+
+.events-min {
+    color: var(--black);
+    opacity: 0.8;
+}
+
+.nav__list-search::after {
+    background-image: url('/images/search-dark.svg') !important;
+}
+
+.nav__list-lang {
+    background: var(--white) !important;
+}
+
+.nav__list-lang .active {
+    background: var(--black) !important;
+    color: var(--white) !important;
+}
+
+.user__path {
+    background-color: var(--white) !important;
+}
+
+
+/*---scroll---*/
+::-webkit-scrollbar {
+  width: var(--scrollBarHeight);
+  height: var(--scrollBarHeight);
+}
+
+::-webkit-scrollbar-button {
+  width: var(--scrollBarHeight);
+  height: var(--scrollBarHeight);
+}
+
+body {
+  background: #111;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.horizontal-scroll-wrapper {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: calc(250px + 1px);
+  max-height: 750px;
+  margin: 0;
+  padding-top: var(--scrollBarHeight);
+  background: #abc;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg) translateY(-750px);
+  transform-origin: right top;
+  & > div {
+    display: block;
+    padding: 5px;
+    background: #cab;
+    transform: rotate(90deg);
+    transform-origin: right top;
+  }
+}
+
+.squares {
+  padding: 250px 0 0 0;
+  & > div {
+    width: 750px;
+    height: 750px;
+    margin: 10px 0;
+  }
+}
