@@ -1,4 +1,5 @@
 const cards = document.querySelectorAll('.card');
+const icons = document.querySelectorAll('.circle');
 
 cards.forEach(card => {
   card.addEventListener('click', (e) => {
@@ -31,3 +32,11 @@ cards.forEach(card => {
   
 });
 
+icons.forEach((e) => {
+  e.addEventListener('click', () => {
+    icons.forEach((e) => {
+      e.querySelector('a').classList.remove('active')
+    })
+    e.querySelector('a').classList.toggle('active')
+  })
+})
