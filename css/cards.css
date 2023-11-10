@@ -139,6 +139,31 @@ body {
     width: 25px;
 }
 
+#search {
+    position: relative;
+    z-index: 667;
+}
+
+.search__input {
+    padding: 0 35px;
+    z-index: 666;
+    position: absolute;
+    width: 82px;
+    height: 82px;
+    background: #2B546A;
+    right: 5px;
+    top: 5px;
+    border-radius: 50px;
+    width: 400px;
+    color: #EFEFEF;
+    transition: all 1s;
+}
+
+@media (max-width: 390px) {
+    .search__input {
+        width: 86vw;
+    }
+}
 
 /*---description of img---*/
 .description {

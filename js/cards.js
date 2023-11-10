@@ -1,5 +1,11 @@
 const cards = document.querySelectorAll('.card');
 const icons = document.querySelectorAll('.circle');
+const searchLink = document.getElementById('search-icon')
+const searchInput = document.querySelector('.search__input')
+
+searchLink.addEventListener('click', () => {
+  searchInput.classList.toggle('none')
+})
 
 cards.forEach(card => {
   card.addEventListener('click', (e) => {
@@ -37,6 +43,7 @@ icons.forEach((e) => {
     icons.forEach((e) => {
       e.querySelector('a').classList.remove('active')
     })
-    e.querySelector('a').classList.toggle('active')
+    e.querySelector('a').classList.add('active')
   })
 })
+
