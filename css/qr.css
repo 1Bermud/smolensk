@@ -19,6 +19,10 @@ body {
     font-weight: 400;
 }
 
+a{
+    color: white;
+}
+
 .header {
     min-height: 73px;
 }
@@ -48,9 +52,9 @@ body {
 
 .content__h {
     max-width: 357px;
-    font-size: 35px;
+    font-size: 28px;
     font-weight: 700;
-    margin-bottom: 60px;
+    margin-bottom: 35px;
     margin-left: 10px;
 }
 
@@ -96,14 +100,15 @@ body {
 
 .cup{
     position: absolute;
-    margin-top: 60px;
+    margin-top: 30px;
     right: 0;
+    width: 130px;
 }
 
 .content__p {
     font-size: 18px;
     font-weight: 700;
-    margin: 330px auto 0;
+    margin: 185px auto 0;
     max-width: fit-content;
 }
 
@@ -113,7 +118,6 @@ body {
     font-size: 14px;
     font-weight: 500;
     margin-top: 8px;
-    margin-bottom: 40px;
     color: white;
     background: rgba(0, 0, 0, 0.80);
     padding: 10px 13px;
