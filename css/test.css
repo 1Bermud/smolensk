@@ -1,24 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;700&display=swap');
+
 body, html
 {
+   padding: 0;
+   margin: 0;
+   font-family: 'Unbounded', sans-serif;
    max-width: 336px;
    height: 100%;
    margin: 0 8px;
    padding: 10px;
    overflow: hidden;
    font-size: 16px;
-   font-family: helvetica, arial;
    background: #F9B752;
    color: #111;
+   font-weight: 500; 
 }
  
 .wrapper
 {
+   transform: translateY(50px);
    width: 300px;
-   height: 70%;
+   max-height: 70%;
    display: table;
    background-color: white;
    margin: 20px auto;
    border-radius: 25px;
+   position: relative;
+   z-index: 6;
+}
+
+body::after{
+   content: '';
+   display: inline-block;
+   position: absolute;
+   height: 533px;
+   width: 533px;
+   background: #F37500;
+   border-radius: 50%;
+   top: -40%;
+   left: -21%;
 }
  
 .main
@@ -28,6 +48,8 @@ body, html
    vertical-align: middle;
    text-align: center;
    padding: 20px;
+   position: relative;
+   z-index: 22;
 }
  
 .quiz-frame
@@ -39,7 +61,8 @@ body, html
  
 .quiz__head
 {
-   font-size: 20pt;
+   font-size: 20px;
+   font-weight: 500;
    margin: 10px;
    margin-bottom: 50px;
 }
@@ -68,6 +91,7 @@ body, html
  
 .footer__content
 {
+   transform: translate(35px, -70px);
    padding: 5px;
 }
  
@@ -75,7 +99,7 @@ body, html
 {
    color: #000;
    padding: 15px 14px;
-   width: 70%;
+   width: 95%;
    font-size: 16px;
    font-weight: 500;
    display: block;
@@ -86,7 +110,7 @@ body, html
    background: #FFF;
 }
 
-.button + .button{
+.button{
    margin-top: 14px;
 }
  
@@ -104,5 +128,17 @@ body, html
  
 .button_passive
 {
-   background: transparent;
+   background: white;
+}
+
+.btn-need{
+   background-color: #000;
+   padding: 10px 24px;
+   border-radius: 20px;
+}
+
+.btn-need a {
+   color: #fff;
+   font-size: 18px;
+   text-decoration: none;
 }

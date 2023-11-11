@@ -127,10 +127,10 @@ class Result
 //Массив с результатами
 const results =
 [
-   new Result("Вам многому нужно научиться", 0),
-   new Result("Вы уже неплохо разбираетесь", 2),
-   new Result("Ваш уровень выше среднего", 4),
-   new Result("Вы в совершенстве знаете тему", 6)
+   new Result("Тест завершен", 0),
+   new Result("Тест завершен", 2),
+   new Result("Тест завершент", 4),
+   new Result("Тест завершена", 6)
 ];
  
 //Массив с вопросами
@@ -249,9 +249,13 @@ function Update()
    else
    {
        //Если это конец, то выводим результат
-       document.getElementById('buttons').innerHTML = "";
+       document.getElementById('buttons').innerHTML = "<button class='btn-need'><a href='afterPlay.html'>Узнать результаты</a></button>";
        document.getElementById('head').innerHTML = quiz.results[quiz.result].text;
-       document.getElementById('pages').innerHTML = "Очки: " + quiz.score;
+       
+    //    document.querySelector('.wrapper1').style.display = 'block'
+    //     body.appendChild(document.createElement('div').innerHTML = "<img width='100%' height='100vh' src='/images/Group1305.jpg'></img>")
+
+       
    }
 }
  
@@ -289,7 +293,7 @@ function Click(index)
        {
            btns[correct].className = "button button_correct";
        }
- 
+  
        if(index != correct)
        {
            btns[index].className = "button button_wrong";
