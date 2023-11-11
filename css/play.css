@@ -27,7 +27,7 @@ a{
 }
 
 .wrapper {
-   
+    max-width: 95%;
 }
 
 .header {
@@ -103,7 +103,7 @@ a{
     top: 150%;
 }
 
-.card__place {
+/* .card__place {
     font-size: 12px;
     font-weight: 400;
     margin-bottom: 17px;
@@ -130,7 +130,7 @@ a{
 
 .nav__ans:checked{
     box-shadow: 0 0 5px black;
-}
+} */
 
 .under-card {
 }
@@ -143,9 +143,9 @@ a{
     padding: 11px 30px;
     z-index: 3;
     position: relative;
-    transform: translateY(500px);
+    transform: translateY(640px);
     border-radius: 20px;
-    margin: 0 30%;
+    margin: 0 32%;
     max-width: 140px;
 }
 
